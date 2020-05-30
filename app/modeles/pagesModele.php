@@ -12,3 +12,11 @@
     $rs->execute();
     return $rs->fetch(PDO::FETCH_ASSOC);
   }
+
+  function findAll(PDO $connexion) {
+    $sql = "SELECT *
+            FROM pages
+            ORDER BY titre ASC";
+    $rs = $connexion->query($sql);
+    return $rs->fetchALL(PDO::FETCH_ASSOC);
+  }

@@ -13,3 +13,11 @@
       include_once '../app/vues/pages/show.php';
     $content = ob_get_clean();
   }
+
+  function menuAction(PDO $connexion) {
+    // Je demande les pages au modèle
+      include_once '../app/modeles/pagesModele.php';
+      $pages = findAll($connexion);
+    // et je charge la vue menu directement
+      include_once '../app/vues/pages/menu.php';
+  }
