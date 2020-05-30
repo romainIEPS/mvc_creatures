@@ -7,10 +7,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">
-        <h2>Accueil</h2>
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolorem, voluptas iusto ipsum totam dignissimos, sapiente inventore soluta accusantium eos animi nesciunt repellendus vitae tempora ullam ea eligendi voluptatem aperiam!</p>
-        </div>
+        <?php echo $content; ?>
       </div>
       <div class="col-lg-4 mx-auto">
         <h2>Les Créatures</h2>
