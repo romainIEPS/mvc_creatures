@@ -19,7 +19,8 @@ use Modeles\Creatures;
       include_once '../app/modeles/creaturesModele.php';
       $creature = Creatures\findOneById($connexion, $id);
     // Je charge la vue show dans $content
-      GLOBAL $content;
+      GLOBAL $content, $title;
+      $title = $creature['nom'];
       ob_start();
         include_once '../app/vues/creatures/show.php';
       $content = ob_get_clean();

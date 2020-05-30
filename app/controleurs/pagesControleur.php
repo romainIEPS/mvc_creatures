@@ -12,7 +12,8 @@ use Modeles\Pages;
       include_once '../app/modeles/pagesModele.php';
       $page = Pages\findOneById($connexion, $id);
     // et je charge la vue show dans $content
-    GLOBAL $content;
+    GLOBAL $content, $title;
+    $title = $page['titre'];
     ob_start();
       include_once '../app/vues/pages/show.php';
     $content = ob_get_clean();
