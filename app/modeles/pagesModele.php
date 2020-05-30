@@ -16,7 +16,7 @@
   function findAll(PDO $connexion) {
     $sql = "SELECT *
             FROM pages
-            ORDER BY titre ASC";
+            ORDER BY tri ASC";
     $rs = $connexion->query($sql);
     return $rs->fetchALL(PDO::FETCH_ASSOC);
   }
