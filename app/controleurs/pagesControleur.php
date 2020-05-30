@@ -1,12 +1,16 @@
 <?php
 /*
-  ./app/controleurs/xxxControleur.php
+  ./app/controleurs/pagesControleur.php
 */
 
-  function showAction(PDO $connexion, int $id = 1) {
+namespace Controleurs\Pages;
+use Modeles\Pages;
+
+
+  function showAction(\PDO $connexion, int $id = 1) {
     // Je demande la page au modèle
       include_once '../app/modeles/pagesModele.php';
-      $page = findOneById($connexion, $id);
+      $page = Pages\findOneById($connexion, $id);
     // et je charge la vue show dans $content
     GLOBAL $content;
     ob_start();
@@ -14,10 +18,10 @@
     $content = ob_get_clean();
   }
 
-  function menuAction(PDO $connexion) {
+  function menuAction(\PDO $connexion) {
     // Je demande les pages au modèle
       include_once '../app/modeles/pagesModele.php';
-      $pages = findAll($connexion);
+      $pages = Pages\findAll($connexion);
     // et je charge la vue menu directement
       include_once '../app/vues/pages/menu.php';
   }

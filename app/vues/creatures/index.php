@@ -10,7 +10,7 @@
 <ul>
   <?php foreach ($creatures as $creature): ?>
     <li>
-      <a href="#"><?php echo $creature['nom']; ?></a>
+      <a href="?creatureId=<?php echo $creature['id']; ?>"><?php echo $creature['nom']; ?></a>
     </li>
   <?php endforeach; ?>
 </ul>
