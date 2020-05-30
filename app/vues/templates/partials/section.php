@@ -10,14 +10,10 @@
         <?php echo $content; ?>
       </div>
       <div class="col-lg-4 mx-auto">
-        <h2>Les Créatures</h2>
-        <ul>
-          <li><a href="">Lorem ipsum.</a></li>
-          <li><a href="">Neque, sequi!</a></li>
-          <li><a href="">Vero, sed!</a></li>
-          <li><a href="">Rerum, id.</a></li>
-          <li><a href="">Molestias, nobis.</a></li>
-        </ul>
+        <?php
+          include_once '../app/controleurs/creaturesControleur.php';
+          \Controleurs\Creatures\indexAction($connexion);
+        ?>
       </div>
     </div>
   </div>

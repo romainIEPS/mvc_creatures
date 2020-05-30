@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <?php
         include_once '../app/controleurs/pagesControleur.php';
-        menuAction($connexion);
+        \Controleurs\Pages\menuAction($connexion);
       ?>
 </div>
   </div>

@@ -10,7 +10,7 @@
 // ACTION: showAction
   if (isset($_GET['pageId'])):
     include_once '../app/controleurs/pagesControleur.php';
-    showAction($connexion, $_GET['pageId']);
+    \Controleurs\Pages\showAction($connexion, $_GET['pageId']);
 
 
 // ROUTE PAR DEFAUT
@@ -19,5 +19,5 @@
 // ACTION: showAction
   else:
     include_once '../app/controleurs/pagesControleur.php';
-    showAction($connexion);
+    \Controleurs\Pages\showAction($connexion);
   endif;
